@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="public/styles.css" />
+    <title>Simple Gan</title>
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body class="bg-slate-100 font-inter dark:bg-gray-800">
+    <section class="mx-auto w-full pt-4">
+      <div class="mx-auto px-3 md:max-w-2xl">
+        <div class="flex justify-end">
+          <div class="flex items-center space-x-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+              />
+            </svg>
+            <input type="checkbox" class="hidden" id="dark-toggle" />
+            <label for="dark-toggle">
+              <div
+                class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-gray-500"
+              >
+                <div
+                  class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"
+                ></div>
+              </div>
+            </label>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div id="info-top" class="mt-6">
+          <div
+            class="mx-auto flex h-[85px] w-[85px] items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-rose-400"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+              alt=""
+              class="mx-auto h-20 w-20 rounded-full border-4 border-slate-100 dark:border-gray-800"
+            />
+          </div>
+          <div class="mt-4 text-center">
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white">
+              Fuad Sholehan
+            </h2>
+            <p class="my-2 dark:text-gray-100">Digital Marketer</p>
+            <div class="mt-4 flex items-center justify-center space-x-3">
+              <a class="dark:text-white" href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a class="dark:text-white" href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a class="dark:text-white" href="#">
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a class="dark:text-white" href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mt-5 rounded-t-[30px] bg-white py-1 px-3 dark:bg-slate-700 md:rounded-none md:py-8"
+      >
+        <div class="mx-auto flex flex-col space-y-2 md:max-w-2xl">
+          <a class="link-title flex-between" href="/">
+            <div class="flex items-center space-x-3">
+              <img src="public/assets/ebook.svg" alt="" />
+              <span>Download e-book Tiktok FYP</span>
+            </div>
+            <img src="public/assets/chevron-right.svg" alt="" />
+          </a>
+          <a class="link-title flex-between" href="/">
+            <div class="flex items-center space-x-3">
+              <img src="public/assets/camera.svg" alt="" />
+              <span>Kelas Destroy Tiktok FYP</span>
+            </div>
+            <img src="public/assets/chevron-right.svg" alt="" />
+          </a>
+          <a class="link-title flex-between" href="/">
+            <div class="flex items-center space-x-3">
+              <img src="public/assets/up.svg" alt="" />
+              <span>Belajar Tiktok Affiliate</span>
+            </div>
+            <img src="public/assets/chevron-right.svg" alt="" />
+          </a>
+          <a class="link-title flex-between" href="/">
+            <div class="flex items-center space-x-3">
+              <img src="public/assets/wa.svg" alt="" />
+              <span>Contact Me</span>
+            </div>
+            <img src="public/assets/chevron-right.svg" alt="" />
+          </a>
+        </div>
+        <div class="my-10 mx-auto flex flex-col space-y-4 md:max-w-2xl">
+          <h2 class="text-center text-xl font-semibold dark:text-white">
+            Kelas Digital Marketing
+          </h2>
+          <a class="link-title flex-between" href="/">
+            <img
+              class="h-10 w-10 rounded-md"
+              src="https://images.unsplash.com/photo-1634942536990-44b9aba4c712?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+              alt=""
+            />
+            <span> Tiktok Affiliate Class </span>
+            <span class="bg-yellow-500 px-4 py-1 text-xs font-bold text-white"
+              >99K</span
+            >
+          </a>
+          <a class="link-title flex-between" href="/">
+            <img
+              class="h-10 w-10 rounded-md"
+              src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+              alt=""
+            />
+            <span> FB & IG Ads Class </span>
+            <span class="bg-yellow-500 px-4 py-1 text-xs font-bold text-white"
+              >99K</span
+            >
+          </a>
+        </div>
+      </div>
+    </section>
+    <script src="public/script.js"></script>
+  </body>
+</html>
